@@ -1,4 +1,4 @@
-import {Ship} from "..modules/Ship";
+import {Ship} from "../modules/Ship";
 
 describe("Ship", () => {
     const ship = new Ship(5);

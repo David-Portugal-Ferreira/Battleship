@@ -15,6 +15,7 @@ class Ship {
       this.length++;
       this.sunk = true;
     }
+    return this.sunk;
   }
 }
 

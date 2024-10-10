@@ -6,4 +6,12 @@ describe("Ship", () => {
     test("Ship length", () => {
         expect(ship.sunk).toBe(false);
     })
+
+    test("Ship is sunk", () => {
+        expect(ship.isSunk()).toBe(false)
+    })
+
+    test("Ship hit", () => {
+        expect(ship.hit()).toReturn()
+    })
 })

@@ -1,3 +1,1 @@
-import { greet } from "./modules/template";
-
-console.log(greet);
+import { Ship } from "./modules/Ship"

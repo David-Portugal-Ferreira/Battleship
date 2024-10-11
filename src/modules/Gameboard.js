@@ -73,6 +73,10 @@ class Gameboard {
     return true;
   }
 
+  collisionChecker() {
+    
+  }
+
   #updateMissedAttack(x, y) {
     this.missedAttack.push([x, y]);
     this.board[x][y] = false;

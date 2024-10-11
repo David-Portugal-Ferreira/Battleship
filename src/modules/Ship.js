@@ -15,7 +15,7 @@ class Ship {
       this.sunk = true;
       return true;
     }
-    return this.sunk;
+    return false;
   }
 }
 

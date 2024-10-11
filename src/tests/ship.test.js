@@ -18,6 +18,6 @@ describe("Ship", () => {
   });
 
   test("Ship hit", () => {
-    expect(ship.hit()).toBeUndefined();
+    expect(ship.hit()).toBe("Ship hit!!!");
   });
 });

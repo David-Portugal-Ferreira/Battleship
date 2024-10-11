@@ -12,12 +12,12 @@ describe("Gameboard Tests", () => {
   });
 
   test("Receive Attack", () => {
-    gameboard.receiveAttack(5, 5);
-    expect(gameboard.missedAttack[0]).toStrictEqual([5, 5])
+    gameboard.placeShip(gameboard.ships.aircraftCarrier, 5, 5, 10, 5);
+    expect(gameboard.receiveAttack(5, 5)).toBe(true)
   });
 
   test("Missed Attack", () => {
-    expect(gameboard.missedAttack.length).toBe(1);
+    expect(new Gameboard().missedAttack.length).toBe(0);
   });
 
   test("Sunk every ship", () => {

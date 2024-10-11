@@ -30,17 +30,16 @@ class Gameboard {
   missedAttack = [];
 
   placeShip(ship, xStart, yStart, xEnd, yEnd) {
-
-    if(xStart === xEnd) {
-        for(let y = yStart; y <= yEnd; y++) {
-            this.board[y][xStart] = ship;
-        }
+    if (xStart === xEnd) {
+      for (let y = yStart; y <= yEnd; y++) {
+        this.board[y][xStart] = ship;
+      }
     }
 
-    if(yStart === yEnd) {
-        for(let x = xStart; x <= xEnd; x++) {
-            this.board[yStart][x] = ship;
-        }
+    if (yStart === yEnd) {
+      for (let x = xStart; x <= xEnd; x++) {
+        this.board[yStart][x] = ship;
+      }
     }
   }
 
@@ -63,7 +62,15 @@ class Gameboard {
   }
 
   receiveAttack(x, y) {
-    this.#updateMissedAttack(x, y);
+    if (this.board[x][y] === null) {
+      this.#updateMissedAttack(x, y);
+      return false;
+    }
+
+    let ship = this.board[x][y];
+    ship.hit();
+    this.board[x][y] = true;
+    return true;
   }
 
   #updateMissedAttack(x, y) {

@@ -1,10 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Battleship Game</title>
-</head>
-<body>
-</body>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="my-gameboard">
+        <div class="first-row">
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+        </div>
+        <div class="second-row">
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+        </div>
+        <div class="third-row">
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+        </div>
+        <div class="fourth-row">
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+        </div>
+        <div class="fifth-row">
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+        </div>
+        <div class="sixth-row">
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+        </div>
+        <div class="seventh-row">
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+        </div>
+        <div class="eighth-row">
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+        </div>
+        <div class="ninth-row">
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+        </div>
+        <div class="tenth-row">
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+        </div>
+      </div>
+      <div class="enemy-gameboard">
+        <div class="first-row">
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+          <div class="first-row-column"></div>
+        </div>
+        <div class="second-row">
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+          <div class="second-row-column"></div>
+        </div>
+        <div class="third-row">
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+          <div class="third-row-column"></div>
+        </div>
+        <div class="fourth-row">
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+          <div class="fourth-row-column"></div>
+        </div>
+        <div class="fifth-row">
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+          <div class="fifth-row-column"></div>
+        </div>
+        <div class="sixth-row">
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+          <div class="sixth-row-column"></div>
+        </div>
+        <div class="seventh-row">
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+          <div class="seventh-row-column"></div>
+        </div>
+        <div class="eighth-row">
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+          <div class="eighth-row-column"></div>
+        </div>
+        <div class="ninth-row">
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+          <div class="ninth-row-column"></div>
+        </div>
+        <div class="tenth-row">
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+          <div class="tenth-row-column"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

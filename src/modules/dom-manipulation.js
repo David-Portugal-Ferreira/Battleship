@@ -1,0 +1,1 @@
+const myGameboard = document.querySelector(".my-gameboard");

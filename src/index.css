@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-gameboard {
+    margin-bottom: 50px;
+}
+
+.first-row,
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row,
+.sixth-row,
+.seventh-row,
+.eighth-row,
+.ninth-row,
+.tenth-row {
+    display: flex;
+    height: 50px;
+    width: 500px;;
+    border: 1px solid black;
+}
+
+.first-row > div, 
+.second-row > div,
+.third-row > div,
+.fourth-row > div,
+.fifth-row > div,
+.sixth-row > div,
+.seventh-row > div,
+.eighth-row > div,
+.ninth-row > div,
+.tenth-row > div {
+    height: 50px;
+    width: calc(500px / 10);
+    border: 1px solid black;
+}
+ 

@@ -1,5 +1,6 @@
 import { Player } from "./modules/Player";
-import "./index.css"
+import "./index.css";
+import { boardAction, viewGameboard } from "./modules/dom-manipulation";
 
 const player1 = new Player("real");
 Object.keys(player1.gameboard.ships).forEach((ship, index) => {
@@ -8,10 +9,9 @@ Object.keys(player1.gameboard.ships).forEach((ship, index) => {
     index,
     0,
     index,
-    0 + player1.gameboard.ships[ship].length,
+    0 + (player1.gameboard.ships[ship].length - 1),
   );
 });
-console.log(player1.gameboard.board);
 
 const player2 = new Player("comp");
 Object.keys(player2.gameboard.ships).forEach((ship, index) => {
@@ -20,7 +20,19 @@ Object.keys(player2.gameboard.ships).forEach((ship, index) => {
     index,
     0,
     index,
-    0 + player2.gameboard.ships[ship].length,
+    0 + (player2.gameboard.ships[ship].length - 1),
   );
 });
-console.log(player2.gameboard.board);
+
+viewGameboard(player1);
+
+boardAction(player1, player2, () => {
+  console.log(whoPlays);
+  whoPlays = player2;
+  console.log(whoPlays);
+});
+
+boardAction(player2, player1, () => {
+  whoPlays = player1;
+  console.log(whoPlays);
+});
